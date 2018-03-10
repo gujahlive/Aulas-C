@@ -1,0 +1,22 @@
+1.     Faça um programa que receba várias altura (pare quando o usuário digitar 0) e depois exiba a média das alturas.
+
+2.     Faça um programa que receba vários números e calcule e mostrar:
+
+a.     Quantidade de números inferiores a 10;
+
+b.     Média dos números positivos
+
+3.     Faça um programa que receba a idade e o sexo de 5 pessoas e que calcule e mostre:
+
+a.     A idade média do grupo;
+
+b.     A idade média das mulheres;
+
+c.      A idade média dos homens.
+
+4.     Fazer um programa para calcular e mostrar os N primeiros termos da série de Fibonacci. O número N é fornecido pelo usuário. A série de Fibonacci é gerada da seguinte forma:
+
+f1 = f2 = 1;
+f3 = f1 + f2 = 2;
+f4 = f2 + f3 = 3;….
+O primeiro e segundo termos valem 1 e os seguintes são calculados somando os dois termos anteriores.
