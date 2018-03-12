@@ -5,7 +5,7 @@ struct TipoProduto{
 char nome[21], marca[21];
 int quant;
 float preco;
-}Produto;// vou ter que fazer uma struct para retornar os valores dessa aqui, pra depois padssar pra uma função, senão dá erro, e eu não sei qual a melhor opção em fazer isso sem fazer uma struct retornante pq isso vai embaçar mais ainda, #entediante
+};// vou ter que fazer uma struct para retornar os valores dessa aqui, pra depois padssar pra uma função, senão dá erro, e eu não sei qual a melhor opção em fazer isso sem fazer uma struct retornante pq isso vai embaçar mais ainda, #entediante
 
 struct TipoFunc{
 char nome[21], sobreNome[21];
@@ -13,14 +13,14 @@ int CPF,RG;
 float sal;
 };
 
-int CadProduto (int VetQuant ,char nomeP[21], char marcaP[21] , int quantP , float precoP ){//eu devo passar como parametro os elementos do struct???
-	
+struct TipoProduto CadProduto (char nomeP[21], char marcaP[21] , int quantP , float precoP ){//eu devo passar como parametro os elementos do struct???
+	struct TipoProduto Produto;
     strcpy(Produto.marca,marcaP);
 	strcpy(Produto.nome,nomeP);
 	Produto.preco = precoP;
 	Produto.quant = quantP;
 	
-	return TipoProduto Produto;// como retorna uma struct???
+	return Produto;// como retorna uma struct???
 	
 }
 int CadFunc(){
@@ -69,7 +69,9 @@ main(){
 		scanf("%d",&quantidadeProduto);
 		printf("Preco do produto: ");
 		scanf("%f",&precoProd);
-		CadProduto(quantCad,nomeProd,marcaProd,quantidadeProduto,precoProd);	
+		fflush(stdin);
+		CadProduto(nomeProd,marcaProd,quantidadeProduto,precoProd);
+		fflush(stdin);	
 	//}
 		 break;
 		
