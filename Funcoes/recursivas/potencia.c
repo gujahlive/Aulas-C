@@ -2,12 +2,10 @@
 int potencia(int B, int E){
 	int R;
 	if(E==1){
-		R = B;
+		return B;
 	} else if (E == 0){
-		 R = 1;
-	}else B = B * potencia(B,E - 1);
-	R = B;
-	return R;
+		 return 1;
+	}else return B * potencia(B,E - 1);
 }
 main(){
 	int b,e,r;
