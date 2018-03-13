@@ -6,6 +6,11 @@ typedef struct{
 }raizes;
 raizes calculaRaizes(int, int , int );// prototipo// sem ele não roda por que ele vai achar a função no final e voltar pra verificar com a tipagem
 
+int encontraDelta(int A, int B, int C){
+	return pow(B,2) - 4 * A * C;
+	
+}
+
 main(){
 	raizes r;
 //	int xlinha,x2linhas;
@@ -18,8 +23,8 @@ main(){
 raizes calculaRaizes(int a, int b, int c){
 	int delta;
 	raizes  roots;
-	delta = pow(b,2) - 4 * a * c;
-	roots.x1 = -b + sqrt(delta) / 2*a;
+	delta = encontraDelta(a,b,c);
+	roots.x1 = (-b + sqrt(delta) )/ 2*a;
 	roots.x2 = -b + sqrt(delta) / 2*a;
 	return roots;
 }
