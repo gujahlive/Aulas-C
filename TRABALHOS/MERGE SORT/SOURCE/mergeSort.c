@@ -38,7 +38,7 @@ int main(void) {
     printf("\n");
     //----------------------------------------
 
-    return 0;
+    //return 0;
 }
 
 void mergeSort(int* vetor, int inicio, int fim) {
@@ -56,8 +56,8 @@ void mergeSort(int* vetor, int inicio, int fim) {
     }
 }
 
-int merge(int* vetor, int inicio, int meio, int fim) {
-    int *vetorAux, p1, p2, tamanho, i, j, k;
+int merge(int* vetor, int inicio, int meio, int fim) {//o valor do vetor que È 10 inicio, meio e fim.
+    int *vetorAux, p1, p2, tamanho, i, j, k;//declara o ponteiro 
     //VARI√ÅVEIS PARA CONTROLAR O FINAL DOS VETORES
     int fim1 = 0, fim2 = 0;
     //-------------------------------------------
@@ -68,7 +68,7 @@ int merge(int* vetor, int inicio, int meio, int fim) {
     //---------------------------------------------------
 
     //VETOR AUXILIAR CRIADO DE FORMA DINAMICA
-    vetorAux = (int *) malloc(tamanho * sizeof(int));
+    vetorAux = (int *) malloc(tamanho * sizeof(int));//
 
     if(vetorAux != NULL){
         for(i = 0; i < tamanho; i++) {
