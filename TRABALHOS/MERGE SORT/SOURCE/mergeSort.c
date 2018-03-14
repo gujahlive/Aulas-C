@@ -4,8 +4,8 @@
 #include <math.h>
 
 //PROTOTIPOS DAS FUNÇÕES
-void mergeSort(int* vetor, int inicio, int fim);
-int merge(int* vetor, int inicio, int meio, int fim);
+void mergeSort(int* vetor, int inicio, int fim); // prototipo da fun��o
+int merge(int* vetor, int inicio, int meio, int fim); // prototipo da fun��o
 //------------------------------------------------
 
 int main(void) {
@@ -20,20 +20,20 @@ int main(void) {
     printf("\nVetor antes da ordenação\n");
     int i;
     for(i = 0; i < 10; i++){
-        printf("%d ", vetorMedio[i]);
+        printf("%d ", vetorPior[i]);
     }
     printf("\n");
     //-------------------------------------------
 
     //FUNÇÃO PARA ORDENAR O VETOR.
     //O PRIMEIRO ARGUMENTO É O VETOR O SEGUNDO A POSIÇÃO INICIAL E O TERCEIRO É A POSIÇÃO FINAL
-    mergeSort(vetorMedio, 0, 9);
+    mergeSort(vetorPior, 0, 9);
     //---------------------------------------------
 
     //IMPRIME O VETOR DEPOIS DE ORGANIZADO
     printf("Vetor depois da ordenação\n");
     for(i = 0; i < 10; i++){
-        printf("%d ", vetorMedio[i]);
+        printf("%d ", vetorPior[i]);
     }
     printf("\n");
     //----------------------------------------
