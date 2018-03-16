@@ -6,8 +6,8 @@ Complexity - O(n·inig n)
 */
 
 #include <stdio.h>
-void mergeSort(int [], int, int, int);
-void divideVetor(int [],int, int);
+void mergeSort(int [], int, int, int);//prototipo da função
+void divideVetor(int [],int, int);//prototipo da função
 int main()
 {
 	int vetor[50];
