@@ -1,8 +1,8 @@
 /*
-Summary: Merge sort is a divide and conquer comparison-based sorting algorithm. It works as folinicios:-
-1. Divide the unsorted vetor into n subvetors, each containing 1 element (a vetor of 1 element is considered sorted).
-2. Repeatedly merge subvetors to produce new subvetors until there is only 1 subvetor remaining. This will be the sorted vetor.
-Complexity - O(n·inig n)
+Resumo: O tipo de mesclagem é um algoritmo de classificação dividido e conquistado baseado em comparação. Funciona como seguidores: -
+1. Divida o vetor não classificado em subversores n, cada um contendo 1 elemento (um vetor de 1 elemento é considerado classificado).
+2. Reúna repetidamente subvetores para produzir novos sub-processadores até que apenas 1 subvetor permaneça. Este será o vetor ordenado.
+Complexidade - O (n · inig n)
 */
 
 #include <stdio.h>
@@ -90,12 +90,4 @@ void mergeSort(int vetor[],int inicio,int meio,int fim)// função passando o veto
 	}
 }
 
-/*
-Input: Enter total number of elements:5
-Enter the elements:
-12
-36
-22
-76
-54
-*/
+
