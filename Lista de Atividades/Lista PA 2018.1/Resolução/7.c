@@ -1,14 +1,28 @@
 #include<stdio.h>
+#include<string.h>
 struct TipoProduto{
 	int quantidade;
 	float preco;
 	char nome[31];
-}produto[2];
+};
+
+
+struct TipoProduto cadProd(char n, float p, int quan){
+	int i;
+	struct TipoProduto produto;
+	strcpy(produto.nome[i],n);
+	produto.preco = p;
+	produto.quantidade = quan;
+	return produto;
+}
+
 
 int Menu(){	
-
-
-int swt,i,quant=0,retirar;
+}
+main(){
+	char nome[21]; 
+	float preco, 
+int swt,i,quant=0,retirar,quantidade;
 	printf("-------------------------------\n\t");
 	printf("1 - Ver Estoque\n\t");
 	printf("2 - Registrar producao\n\t");
@@ -18,11 +32,11 @@ int swt,i,quant=0,retirar;
 	scanf("%d",&swt);
 	switch (swt){
 		case 1:
-		/*if(quant==0){
-			printf("\n\n\tESTOQUE VAZIO!\n\n");// não ta caindo no else só cai no if direto
+		if(quant==0){
+			printf("\n\n\tESTOQUE VAZIO!\n\n");
 			Menu();
 			
-		}else if(quant>0){}*/
+		}	
 		printf("------------------ ");
 		for(i=0;i<=quant;i++){//não lista todos os produtos
 			printf("Nome: %s\t",produto[i].nome);
@@ -31,22 +45,23 @@ int swt,i,quant=0,retirar;
 		}printf(" ------------------\n\n");Menu();break;
 	
 		case 2:
-		for(i=0;i<=quant;i++){
 		fflush(stdin);
 		printf("Nome: ");
-		gets(produto[i].nome);
+		gets(nome);
 		fflush(stdin);
 		printf("Preco: ");
-		scanf("%f",&produto[i].preco);	
+		scanf("%f",&preco);	
 		fflush(stdin);
 		printf("Quantidade: ");
-		scanf("%d",&produto[i].quantidade);
+		scanf("%d",&quantidade);
 		quant++;
 		fflush(stdin);
+		produto = CadProd(nome, preco, quantidade );	
+		
 		Menu();
-		printf("\n");
-			
-		}	
+		
+		
+		printf("\n");	
 		
 		break;
 		case 3:
@@ -67,8 +82,5 @@ int swt,i,quant=0,retirar;
 }
 
 
-main(){
 	
-	Menu();
-	
-}
+	//Menu();
