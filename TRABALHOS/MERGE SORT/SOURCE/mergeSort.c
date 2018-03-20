@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include<locale.h>
 
 //PROTOTIPOS DAS FUNÃ‡Ã•ES
 void mergeSort(int* vetor, int inicio, int fim); // prototipo da função
@@ -9,6 +10,7 @@ int merge(int* vetor, int inicio, int meio, int fim); // prototipo da função
 //------------------------------------------------
 
 int main(void) {
+	setlocale(LC_ALL,"Portuguese");
     //VETOR ORGANIZADO EM ORDEM DECRESCENTE
     int vetorPior[] = {10,9,8,7,6,5,4,3,2,1};
     //VETOR ORGANIZADO DE FORMA ALEATORIA
@@ -17,7 +19,7 @@ int main(void) {
     int vetorMelhor[] = {1,2,3,4,5,6,7,8,9,10};
 
     //IMPRIME TODOS OS VALORES ANTES DA ORDENAÃ‡ÃƒO
-    printf("\nVetor antes da ordenaÃ§Ã£o\n");
+    printf("\nVetor antes da ordenação\n");
     int i;
     for(i = 0; i < 10; i++){
         printf("%d ", vetorPior[i]);
@@ -31,7 +33,7 @@ int main(void) {
     //---------------------------------------------
 
     //IMPRIME O VETOR DEPOIS DE ORGANIZADO
-    printf("Vetor depois da ordenaÃ§Ã£o\n");
+    printf("Vetor depois da ordenação\n");
     for(i = 0; i < 10; i++){
         printf("%d ", vetorPior[i]);
     }
