@@ -11,6 +11,7 @@ main(){
 	  NUM2=NUM%10;
 	  NUM=NUM/10;
 	  NUM3=NUM%10;
+	  NUM=NUM/10;
 	}   
   printf("%d%d%d\n\n", NUM1,NUM2,NUM3);
   system("PAUSE");
