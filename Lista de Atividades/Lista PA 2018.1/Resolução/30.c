@@ -1,0 +1,2 @@
+/*30 - Escreva um programa que leia um inteiro não negativo N e imprima a soma dos N
+primeiros números primos. */
