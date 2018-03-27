@@ -49,7 +49,7 @@ void mergeSort(int* vetor, int inicio, int fim) {
     if(inicio < fim){
         //DIVIDE O TAMANHO TOTAL DO VETOR POR 2
         meio = floor((inicio + fim) / 2);
-        //FUNÇÃO RECURSIVA PARA DIVIDIR AS DUAS METADES ATÉ RESTAREM SÓ VETORES COM 1 POSIÇÃO
+        //FUNÇÃO RECURSIVA PARA DIVIDIR AS DUAS METADES AT� RESTAREM S� VETORES COM 1 POSI��O
         mergeSort(vetor, inicio, meio);
         mergeSort(vetor, meio + 1, fim);
         //---------------------------------------------------------------------

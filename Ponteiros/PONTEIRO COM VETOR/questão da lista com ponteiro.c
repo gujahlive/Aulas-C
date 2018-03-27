@@ -7,67 +7,70 @@ typedef struct {
 	int matricula;
 }Talunos;
 main(){
-	Talunos aluno[3],*Paluno,AlunoRp[3],AlunoAp[3];
+	Talunos aluno[3],*Paluno,AlunoRp[3],AlunoAp[3],*PAAP,*PARP;
 	Paluno = aluno;
-	
-	
+	PAAP = AlunoAp;
+	PARP = AlunoRp;
 	int i,contAp=0,contRp=0;
-/*	for (i=0;i<3;i++){
+	for (i=0;i<3;i++){
 		fflush(stdin);
 		printf("Nome: ");
-		gets(aluno[i].nome);
+		gets(Paluno[i].nome);
 		fflush(stdin);
 		printf("Matricula: ");
-		scanf("%d",&aluno[i].matricula);
+		scanf("%d",&Paluno[i].matricula);
 		printf("Media final: ");
-		scanf("%f",&aluno[i].mediaFinal);
+		scanf("%f",&Paluno[i].mediaFinal);
 		//fflush(stdin);
-		if (aluno[i].mediaFinal >= 5){
-			contAp++;
-			strcpy(AlunoAp[contAp].nome,aluno[i].nome);
-			AlunoAp[contAp].matricula = aluno[i].matricula;
-			AlunoAp[contAp].mediaFinal = aluno[i].mediaFinal;
-			printf("Aprovado! %f",AlunoAp[contAp].mediaFinal);
+		if (Paluno[i].mediaFinal >= MEDIA){
+			
+			strcpy(PAAP[contAp].nome,Paluno[i].nome);
+			PAAP[contAp].matricula = Paluno[i].matricula;
+			PAAP[contAp].mediaFinal = Paluno[i].mediaFinal;
+			printf("Aprovado! %f",PAAP[contAp].mediaFinal);
+			contAp++;//tem que atribuir depois, pq ele ta começando do zero e aqui ele vira um;
 	
 		}else{
-			contRp++;
-			AlunoRp[contRp] = aluno[i];
-			printf("Reprovado! %f",AlunoRp[contRp].mediaFinal);
+			
+		//	AlunoRp[contRp] = aluno[i]; //pra copiar todos os indices
+			
 			fflush(stdin);
-			strcpy(AlunoRp[contRp].nome,aluno[i].nome);
+			strcpy(PARP[contRp].nome,Paluno[i].nome);
 			fflush(stdin);
-			AlunoRp[contRp].matricula = aluno[i].matricula;
-			AlunoRp[contRp].mediaFinal = aluno[i].mediaFinal;
+			PARP[contRp].matricula = Paluno[i].matricula;
+			PARP[contRp].mediaFinal = Paluno[i].mediaFinal;
 			fflush(stdin);
+			printf("Reprovado! %f",PARP[contRp].mediaFinal);
+			contRp++;//tem que atribuir depois, pq ele ta começando do zero e aqui ele vira um;
 	}
 		printf("\n");
 		
 	}
-	printf("%d\n%d",contAp,contRp);
-	
+	printf("ContAP: %d\nContRP: %d\n",contAp,contRp);
+	int j;
 	printf("\tAlunos Aprovados: \n");
-		for(i=0;i<contAp;i++){
+		for(j=0;j<contAp;j++){
 		//	fflush(stdin);
-			printf("Nome: %s\n",AlunoAp[i].nome);
-			printf("Matricula: %d\n",AlunoAp[i].matricula);
-			printf("Media Final: %.2f\n",AlunoAp[i].mediaFinal);
+			printf("Nome: %s\n",PAAP[j].nome);
+			printf("Matricula: %d\n",PAAP[j].matricula);
+			printf("Media Final: %.2f\n",PAAP[j].mediaFinal);
 			printf("\n");
 		//	fflush(stdin);
 		}
-		printf("\n");
+	printf("\n");
 	printf("\tAlunos Reprovados: \n");
 		
-		for(i=0;i<contRp;i++){
+		for(j=0;j<contRp;j++){
 		//	fflush(stdin);
-			printf("Nome: %s\n",AlunoRp[i].nome);
-			printf("Matricula: %d\n",AlunoRp[i].matricula);
-			printf("Media Final: %.2f\n",AlunoRp[i].mediaFinal);
+			printf("Nome: %s\n",PARP[j].nome);
+			printf("Matricula: %d\n",PARP[j].matricula);
+			printf("Media Final: %.2f\n",PARP[j].mediaFinal);
 			printf("\n");
 		//	fflush(stdin);
 		
 		}
 			system("PAUSE");
-	*/
+	
 }
 
 
