@@ -1,15 +1,13 @@
 #include<stdio.h>
 #include<string.h>
 #define MEDIA 5
-
-
 typedef struct {
 	char nome[20];
 	float mediaFinal;
 	int matricula;
 }Talunos;
 main(){
-	Talunos aluno[3],AlunoRp[3],AlunoAp[3];
+	Talunos aluno[3],*Paluno,AlunoRp[3],AlunoAp[3];
 	int i,contAp=0,contRp=0;
 	for (i=0;i<3;i++){
 		fflush(stdin);
@@ -32,12 +30,12 @@ main(){
 			contRp++;
 			AlunoRp[contRp] = aluno[i];
 			printf("Reprovado! %f",AlunoRp[contRp].mediaFinal);
-		/*	fflush(stdin);
+			fflush(stdin);
 			strcpy(AlunoRp[contRp].nome,aluno[i].nome);
-		//	fflush(stdin);
+			fflush(stdin);
 			AlunoRp[contRp].matricula = aluno[i].matricula;
 			AlunoRp[contRp].mediaFinal = aluno[i].mediaFinal;
-			fflush(stdin);*/
+			fflush(stdin);
 	}
 		printf("\n");
 		
@@ -68,3 +66,5 @@ main(){
 			system("PAUSE");
 	
 }
+
+
