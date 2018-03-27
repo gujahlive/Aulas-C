@@ -8,8 +8,11 @@ typedef struct {
 }Talunos;
 main(){
 	Talunos aluno[3],*Paluno,AlunoRp[3],AlunoAp[3];
+	Paluno = aluno;
+	
+	
 	int i,contAp=0,contRp=0;
-	for (i=0;i<3;i++){
+/*	for (i=0;i<3;i++){
 		fflush(stdin);
 		printf("Nome: ");
 		gets(aluno[i].nome);
@@ -64,7 +67,7 @@ main(){
 		
 		}
 			system("PAUSE");
-	
+	*/
 }
 
 

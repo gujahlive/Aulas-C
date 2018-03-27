@@ -1,0 +1,7 @@
+Um algoritmo de complexidade O(n log n) (sub-quadrático ou super-linear) é melhor do que o quadrático, sendo geralmente até onde se consegue otimizar algoritmos que são quadráticos em sua implementação mais direta e inocente (naïve). É o caso do algoritmo de ordenação QuickSort, por exemplo (que tem essa complexidade no caso médio, mas que ainda assim é quadrático no pior caso).
+
+Um algoritmo de complexidade O(n) (linear) é aquele cujo crescimento no número de operações é diretamente proporcional ao crescimento do número de itens. É o caso de algoritmos de busca em uma matriz unidimensional não ordenada, por exemplo.
+
+Um algoritmo de complexidade O(log n) (logaritmo) é aquele cujo crescimento do número de operações é menor do que o do número de itens. É o caso de algoritmos de busca em árvores binárias ordenadas (Binary Search Trees), por exemplo (no caso médio, no pior caso continua sendo linear).
+
+Um algoritmo de complexidade O(1) (constante) é aquele em que não há crescimento do número de operações, pois ele independente do volume de dados de entrada (n). É o caso do acesso direto a um elemento de uma matriz, por exemplo.
