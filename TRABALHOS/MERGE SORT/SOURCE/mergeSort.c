@@ -59,7 +59,7 @@ void mergeSort(int* vetor, int inicio, int fim) {
 }
 
 int merge(int* vetor, int inicio, int meio, int fim) {//o valor do vetor que È 10 inicio, meio e fim.
-    int *vetorAux, p1, p2, tamanho, i, j, k;//declara o ponteiro 
+    int *vetorAux, p1, p2, tamanho, i, j, k;
     //VARI√ÅVEIS PARA CONTROLAR O FINAL DOS VETORES
     int fim1 = 0, fim2 = 0;
     //-------------------------------------------
