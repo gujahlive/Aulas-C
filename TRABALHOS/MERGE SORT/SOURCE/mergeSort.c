@@ -50,8 +50,8 @@ void mergeSort(int* vetor, int inicio, int fim) {
         //DIVIDE O TAMANHO TOTAL DO VETOR POR 2
         meio = floor((inicio + fim) / 2);
         //FUNÃ‡ÃƒO RECURSIVA PARA DIVIDIR AS DUAS METADES ATÉ RESTAREM SÓ VETORES COM 1 POSIÇÃO
-        mergeSort(vetor, inicio, meio);
-        mergeSort(vetor, meio + 1, fim);
+        mergeSort(vetor, inicio, meio);//recursiva chamando os elementos
+        mergeSort(vetor, meio + 1, fim);//
         //---------------------------------------------------------------------
         //COMBINA AS DUAS METADES DE FORMA ORDENADA
         merge(vetor, inicio, meio, fim);
@@ -77,13 +77,13 @@ int merge(int* vetor, int inicio, int meio, int fim) {//o valor do vetor que é 1
             //VERIFICA SE ALGUM DOS VETORES ACABOU PARA CONTINUAR COMPARANDO AS POSIÃ‡Ã•ES
             if(!fim1 && !fim2) {
                 if(vetor[p1] < vetor[p2])
-                    vetorAux[i] = vetor[p1++];
+                    vetorAux[i] = vetor[p1++];// copia o valor pro vetor auxiliar e soma mais um 
                 else
-                    vetorAux[i] = vetor[p2++];
+                    vetorAux[i] = vetor[p2++];// copia o valor pro vetor auxiliar e soma mais um
 
                 //VERIFICA SE ALGUM DOS VETORES ACABOU
                 if(p1 > meio)
-                    fim1 = 1;
+                    fim1 = 1;//se um dos vetores acabou, não precisa copiar só complementar
                 if(p2 > fim)
                     fim2 = 1;
                 //--------------------------------
