@@ -1,6 +1,7 @@
 #include<stdio.h>
 main(){
-	int x = 10,*px ,**ppx;
+int x = 10,*px ,**ppx;
+
 	px = &x;
 	ppx = &px;
 	printf("%d %d %d \n",x,px,ppx);

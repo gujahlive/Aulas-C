@@ -70,7 +70,7 @@ int merge(int* vetor, int inicio, int meio, int fim) {//o valor do vetor que é 1
     //---------------------------------------------------
 
     //VETOR AUXILIAR CRIADO DE FORMA DINAMICA
-    vetorAux = (int *) malloc(tamanho * sizeof(int));//
+    vetorAux = (int*)  malloc(tamanho * sizeof(int));//cast, uma conversão
 
     if(vetorAux != NULL){
         for(i = 0; i < tamanho; i++) {
