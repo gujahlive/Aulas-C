@@ -3,19 +3,21 @@
 struct TipoData{
 	int dia,mes,ano;
 }data;
-struct TipoCarro {
+typedef struct{
 	int anoLancamento,qtPortas;
 	char marca[20];
+	
 	float preco;
 	
-};
+}TipoCarro;
 main(){
+	TipoCarro *ResolveMarca;
 	int n,i,carNew,carOld;
 	float mediaCars,Sum=0;
 	
 	printf("Quantos carros deseja: ");
 	scanf("%d",&n);
-	struct TipoCarro Carro[n],CarroMaisNovo;
+	 TipoCarro Carro[n],CarroMaisNovo;
 	for(i=0;i<n;i++){
 		fflush(stdin);
 		printf("Ano Lancamento: ");
@@ -32,16 +34,20 @@ main(){
 		Sum += Carro[i].preco;
 		fflush(stdin);
 	}
+	
 	for (i=0;i<n;i++){
 		if(Carro[i].anoLancamento < carNew){
-			carNew = Carro[i].anoLancamento;//passa o ano de lancamento
 			CarroMaisNovo.anoLancamento = Carro[i].anoLancamento;
-			strcpy(CarroMaisNovo.marca,Carro[i].marca);
+			fflush(stdin);
+			//CarroMaisNovo.marca = &Carro.marca;  
+			strcpy(ResolveMarca.marca,Carro[i].marca);// deveria passar sem ponteiro.
+			fflush(stdin);
 			CarroMaisNovo.preco = Carro[i].preco;
 			CarroMaisNovo.qtPortas = Carro[i].qtPortas;
 		}
 		
 	}
+	printf("confere: \n\n");
 	for(i=0;i<n;i++){
 		printf("Ano Lancamento: %d\n",Carro[i].anoLancamento);
 		printf("Preco: %.2f\n",Carro[i].preco);

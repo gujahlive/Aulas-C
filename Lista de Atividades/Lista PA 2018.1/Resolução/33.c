@@ -2,3 +2,4 @@
 números, onde m e a média do vetor. 
 desvio padrao = raiz de 1/n-1// olha la pq n entendi nada
 */
+
