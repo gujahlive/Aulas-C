@@ -26,8 +26,6 @@ main(){
 	free(vet);
 	vet = NULL;
 	printf("LIVRE\n");
-	//for(i=0 ; i< n; i++){
-	//	printf("vet[%d]: %d\n",i,vet[i]);
-	//}
+
 	
 }
