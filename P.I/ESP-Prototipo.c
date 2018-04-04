@@ -2,6 +2,7 @@
 #include<locale.h>
 #include<string.h>
 #include<stdlib.h>
+#include <conio.h>
 
 int Menu (){
 	int e, SegDigitados,i;
@@ -48,7 +49,7 @@ int Menu (){
 		scanf("%d",&SegDigitados);
 	    strcpy(Comando,"shutdown -s -t ");
 	    printf("A Maquina Será Desligada em %d Segundos\n",SegDigitados);
-		strcat(Comando,SegDigitados);
+		//strcat(Comando,SegDigitados);
 		//system(Comando);
 		
 		break;
@@ -84,10 +85,16 @@ int Menu (){
 
 main(){
 		setlocale(LC_ALL,"Portuguese");
+		
+	
 	
 	int e, SegDigitados,i;
 	char decisao;
 	
+	printf("\t\t E.S.P\n");
+	printf("Economic Sensor Presence\n");
+	printf("O E.S.P, é um aplicativo na qual\nprover a interação entre ambiente\ne pessoa.\n\n\n\n\n");
+	printf("");
 	Menu();
 	
 	if (e != 10){
