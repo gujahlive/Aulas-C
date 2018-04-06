@@ -12,7 +12,7 @@ typedef struct{
 }Tanimal;
 
 char BuscarAnimal(Tanimal *vetAnimal, char *search){// como vou passar esse vetor aqui???
-	
+    int i;// posição pra varrer, vai precisar de um for
 	if (search == vetAnimal[i].nome){
 		return vetAnimal[i];
 	}
