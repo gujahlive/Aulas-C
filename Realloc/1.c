@@ -11,7 +11,7 @@ typedef struct{
 	
 }Tanimal;
 
-char BuscarAnimal(Tanimal *vetAnimal, char *search){// como vou passar esse vetor aqui???
+/*char BuscarAnimal(Tanimal *vetAnimal, char *search){// como vou passar esse vetor aqui???
     int i;// posição pra varrer, vai precisar de um for
 	if (search == vetAnimal[i].nome){
 		return vetAnimal[i];
@@ -30,12 +30,13 @@ char BuscarAnimal(Tanimal *vetAnimal, char *search){// como vou passar esse veto
 }*/
 main(){
 	Tanimal *animal;
-	int n,i,novosAnimais,result;
+	int *n,n1,i,novosAnimais,result;
 	char sorn;
+	n = &n1;
 	printf("\t\t\t\tCadastro Animal\n");
 	printf("Quantos Animal Deseja Cadastrar? : ");
-	scanf("%d",&n);
-	animal = (Tanimal *) malloc (n * sizeof(Tanimal));
+	scanf("%d",&n1);
+	animal = (Tanimal *) malloc (*n * sizeof(Tanimal));
 	for (i = 0 ; i < n ; i++){
 		fflush(stdin);
 		printf("\t\t\t\tCadastro Animal\n");
