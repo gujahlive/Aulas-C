@@ -11,15 +11,17 @@ typedef struct{
 	
 }Tanimal;
 
+
+
+
 /*char BuscarAnimal(Tanimal *vetAnimal, char *search){// como vou passar esse vetor aqui???
     int i;// posição pra varrer, vai precisar de um for
 	if (search == vetAnimal[i].nome){
 		return vetAnimal[i];
 	}
 	
-}
-//Tanimal AlocaAnimal(Tanimal *vet){ } se fran n quer que capture nenhum valor de denttro de uma função!, por quer capturar o nome a idade e a especie nessa função
-
+}*/
+		
 /*int MenuPrincipal(){
 	int escolha;
 	printf("\t\t\t\tCadastro Animal");
@@ -45,8 +47,6 @@ int i;
 }
 
 
-
-
 Tanimal AlocaAnimal(int quant){	
 Tanimal *animal;
 int i;
@@ -68,7 +68,8 @@ for (i = 0 ; i < quant ; i++){
 //		animal++;
 		//printf("\t\t\t\t\tAnimal Cadastrado\nNome: %s\nIdade: %d\nEspecie: %s\n",(*animal).nome,(*animal).idade,(*animal).especie);
 		//AlocaAnimal(&animal);
-		
+	    ExibaAnimal(animal);	
+
 	}
 	
 	for (i = 0 ; i < quant ; i++){
@@ -83,7 +84,7 @@ for (i = 0 ; i < quant ; i++){
 
 }
 main(){
-	Tanimal *animal;
+	//Tanimal *animal;
 	int n,n1,i,novosAnimais,result;
 	char sorn;
 	printf("\t\t\t\tCadastro Animal\n");
@@ -91,16 +92,15 @@ main(){
 	scanf("%d",&n);
 	AlocaAnimal(n);
 	
-	
 	printf("deseja cadastrar mais? S=SIM ou N=NAO: ");	
 	scanf("%c",&sorn);
 	if (sorn == 's'){
 		printf("Quantos Animais?: ");
 		scanf("%d",&novosAnimais);
-		result = n + novosAnimais ; 
-		animal = (Tanimal *)  realloc (animal ,result * sizeof(Tanimal));
-		// a função aloca animal, vai ter que entrar aqui
-		
+		//result = n + novosAnimais ; esse calculo vai entrar numa função de realocar; 
+		//animal = (Tanimal *)  realloc (animal ,result * sizeof(Tanimal));
+		AlocaAnimal(result);// vai pra função de reallocar
+		// a função aloca animal, vai ter que entrar aqui	
 		
 		
 	} else 
