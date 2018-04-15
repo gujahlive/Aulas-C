@@ -3,3 +3,8 @@
 ? Crie e construa uma matriz transposta M x N de inteiros.
 Alocação Dinâmica 
 ? Mostre as duas matrizes. */
+#include<stdio.h>
+#include<stdlib.h>
+main(){
+	
+}

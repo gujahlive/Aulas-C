@@ -5,3 +5,8 @@ deve ter um tamanho maior ou igual a 10 elementos. Use este vetor dinâmico como
 um vetor comum, atribuindo aos 10 primeiros elementos do vetor valores aleatórios
 (usando a função rand) entre 0 e 100. Exiba na tela os valores armazenados nos 10
 primeiros elementos do vetor. */
+#include<stdio.h>
+#include<stdlib.h>
+main(){
+	
+}

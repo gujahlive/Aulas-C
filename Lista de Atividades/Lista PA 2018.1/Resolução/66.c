@@ -11,7 +11,7 @@ main(){
 	scanf("%d",&n);
 	vet = (int *) malloc ( n * sizeof(int));
     printf("\nValor de n : %d",n);
-	printf("\nendereco: %d\n",vet);
+	//printf("\nendereco: %d\n",vet);
 	for(i=0;i<n;i++){
 		printf("Povoe: ");
 		scanf("%d",&vet[i]);

@@ -2,3 +2,8 @@
 na memória e pare a leitura quando o usuário entrar um número negativo. Em
 seguida, ´ imprima o vetor lido. Use a função REALLOC. 
 */
+#include<stdio.h>
+#include<stdlib.h>
+main(){
+	
+}
